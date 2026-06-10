@@ -2,29 +2,31 @@
 
 ## Description
 
-Super Mode Vocal Protocol est un protocole de communication vocale.
+Protocole de communication vocale avancé pour applications interactives.
 
 ## Fonctionnalités
 
-- Reconnaissance vocale
-- Synthèse vocale
-- Communication en temps réel
+- Reconnaissance vocale multi-langues
+- Synthèse vocale naturelle
+- Traitement du langage naturel intégré
 
-## Stack
+## Stack technique
 
-- Langage: Python
-- Bibliothèques: TensorFlow, PyAudio
+- Python 3.8+
+- TensorFlow 2.0
+- Flask pour l'API
 
-## Installation et lancement
+## Installation
 
-1. Clonez le dépôt
-2. Installez les dépendances avec `pip install -r requirements.txt`
-3. Lancez l'application avec `python main.py`
+```bash
+pip install -r requirements.txt
+python main.py
+```
 
 ## Statut
 
-Ce projet est en développement actif.
+Protocole fonctionnel en développement actif
 
 ## Licence
 
-Ce projet est sous licence MIT.
+MIT
