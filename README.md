@@ -1,56 +1,36 @@
 # Super Mode Vocal Protocol
 
-Procédure agentique validée par Amor pour faire lire rapidement une réponse Hermès/RMS-AI via ChatGPT.
+![GitHub](https://img.shields.io/github/license/Amoradvisory/super-mode-vocal-protocol)
+![GitHub last commit](https://img.shields.io/github/last-commit/Amoradvisory/super-mode-vocal-protocol)
+![GitHub issues](https://img.shields.io/github/issues/Amoradvisory/super-mode-vocal-protocol)
 
-## Statut
+## Description
 
-Validé 100% en conditions réelles :
+Protocole de communication vocale avancé pour les interactions homme-machine.
 
-- projet ChatGPT `Mode Vocal` ;
-- mode `Instant` ;
-- effet miroir exact ;
-- déclenchement rapide de `Lire à haute voix` ;
-- vérification par l'état `Arrêter`.
+## Fonctionnalités
 
-## Objectif
+- Protocole de communication vocale
+- Intégration avec les assistants vocaux
+- Gestion des commandes vocales
+- Traitement du langage naturel
 
-Permettre à un agent local de :
-
-1. focaliser le navigateur commun persistant ;
-2. coller/envoyer la réponse à faire entendre ;
-3. attendre la réponse miroir ;
-4. cliquer le vrai menu `Plus d’actions` ;
-5. sélectionner le `MenuItem` exact `Lire à haute voix` ;
-6. vérifier que la lecture est active.
-
-## Pré-requis
-
-- Windows.
-- Google Chrome déjà ouvert avec une session ChatGPT connectée.
-- Projet ChatGPT nommé `Mode Vocal`.
-- Instructions du projet : répéter exactement le texte reçu, sans raisonnement ni commentaire.
-- Compositeur du projet réglé sur `Instant`.
-- Python avec `pyautogui`, `pyperclip`, `pywinauto`.
-
-## Utilisation
+## Installation
 
 ```bash
-python scripts/super_mode_vocal_fast.py --text "Texte à faire lire par ChatGPT."
+# Clone le dépôt
+git clone https://github.com/Amoradvisory/super-mode-vocal-protocol.git
+
+# Accède au répertoire
+cd super-mode-vocal-protocol
+
+# Installe les dépendances
+pip install -r requirements.txt
+
+# Lance l'application
+python main.py
 ```
 
-Ou :
+## Licence
 
-```bash
-python scripts/super_mode_vocal_fast.py --file message.txt
-```
-
-## Points critiques
-
-- Ne pas utiliser un navigateur jetable : viser le Chrome persistant où ChatGPT est déjà connecté.
-- Ne pas cliquer un texte qui contient les mots `Lire à haute voix` : cibler le vrai `MenuItem`.
-- Éviter les captures écran dans le chemin rapide ; utiliser l'UI Automation.
-- En cas d'échec : aller en bas de la réponse, rouvrir `Plus d’actions`, puis cliquer `Lire à haute voix`.
-
-## Origine
-
-Ce protocole a été créé pour Amor/Hermès/RMS-AI afin de transformer une réponse textuelle en lecture vocale rapide, reproductible et vérifiée.
+Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.
