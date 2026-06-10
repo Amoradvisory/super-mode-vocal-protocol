@@ -1,32 +1,29 @@
 # Super Mode Vocal Protocol
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 ## Description
 
-Protocole validé pour permettre à un agent AI de faire entendre sa réponse via le projet ChatGPT "Mode Vocal". Ce protocole permet une lecture vocale rapide et automatisée des réponses de l'agent.
+Super Mode Vocal Protocol est un protocole de communication vocale.
 
 ## Fonctionnalités
 
-- Intégration avec le navigateur commun Amor/Hermès
-- Automatisation de la lecture vocale via ChatGPT
-- Procédure optimisée pour une exécution rapide
+- Reconnaissance vocale
+- Synthèse vocale
+- Communication en temps réel
 
-## Pré-requis
+## Stack
 
-- Google Chrome avec le profil persistant `marco-default`
-- Projet ChatGPT "Mode Vocal" configuré en mode "Instant"
-- Navigateur commun Amor/Hermès déjà configuré
+- Langage: Python
+- Bibliothèques: TensorFlow, PyAudio
 
-## Installation et utilisation
+## Installation et lancement
 
-1. Configurer le projet ChatGPT "Mode Vocal" avec les instructions spécifiques
-2. Utiliser le protocole décrit dans SUPER_MODE_VOCAL_PROTOCOL.md
-3. Activer le mode via la commande "active le super mode vocal"
+1. Clonez le dépôt
+2. Installez les dépendances avec `pip install -r requirements.txt`
+3. Lancez l'application avec `python main.py`
 
 ## Statut
 
-Protocole validé à 100% par Amor le 2026-05-26. Fonctionnel et actif par défaut.
+Ce projet est en développement actif.
 
 ## Licence
 
