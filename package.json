@@ -1,0 +1,9 @@
+{
+  "name": "super-mode-vocal-protocol-lab",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check projects/neon-isles/js/engine.js && node --check projects/neon-isles/js/app.js && node --check projects/neon-isles/js/renderer.js && node --check projects/neon-isles/js/controls.js && node --check projects/neon-isles/js/storage.js && node --check projects/neon-isles/js/themes.js"
+  }
+}

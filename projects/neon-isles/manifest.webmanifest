@@ -1,0 +1,20 @@
+{
+  "name": "Neon Isles",
+  "short_name": "Neon Isles",
+  "description": "Jeu de blocs tombants à l'ambiance insulaire nocturne, pensé pour Android.",
+  "lang": "fr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#081426",
+  "theme_color": "#081426",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
