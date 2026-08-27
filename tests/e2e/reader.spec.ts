@@ -26,6 +26,8 @@ test('aucun débordement horizontal aux tailles critiques', async ({ page }) => 
   for (const width of [320, 360, 390, 430, 768, 1024]) {
     await page.setViewportSize({ width, height: 800 });
     await page.goto('/#/sourate/2');
+    await page.evaluate(() => localStorage.clear());
+    await page.reload();
     for (let i = 0; i < 4; i += 1) await page.getByRole('button', { name: 'Agrandir le texte' }).click();
     const metrics = await page.evaluate(() => ({ scrollWidth: document.documentElement.scrollWidth, clientWidth: document.documentElement.clientWidth }));
     expect(metrics.scrollWidth).toBeLessThanOrEqual(metrics.clientWidth);
