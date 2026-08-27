@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA_DIR = join(ROOT, 'public', 'data');
 const TRANSLATION_KEY = 'french_hameedullah';
-const LIST_URL = 'https://quranenc.com/api/v1/translations/list/fr?localization=fr';
+const VERIFIED_VERSION = '1.0.2';
 const SURA_URL = (number) => `https://quranenc.com/api/v1/translation/sura/${TRANSLATION_KEY}/${number}`;
 
 const NAMES = {
@@ -34,16 +34,11 @@ async function fetchJson(url, attempts = 4) {
 function unwrapArray(payload) {
   if (Array.isArray(payload)) return payload;
   if (Array.isArray(payload?.result)) return payload.result;
-  if (Array.isArray(payload?.translations)) return payload.translations;
   return null;
 }
 
 async function main() {
   await mkdir(DATA_DIR, { recursive: true });
-  const translationList = unwrapArray(await fetchJson(LIST_URL));
-  if (!translationList) throw new Error('Liste QuranEnc illisible.');
-  const translation = translationList.find((item) => item?.key === TRANSLATION_KEY);
-  if (!translation?.version) throw new Error(`Version introuvable pour ${TRANSLATION_KEY}.`);
 
   const surahs = [];
   for (let number = 1; number <= 114; number += 1) {
@@ -67,7 +62,7 @@ async function main() {
     source: 'QuranEnc',
     translationKey: TRANSLATION_KEY,
     translationName: 'Muhammad Hamidullah',
-    version: String(translation.version),
+    version: VERIFIED_VERSION,
     importedAt,
     surahs,
   };
