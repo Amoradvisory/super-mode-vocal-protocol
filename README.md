@@ -35,9 +35,9 @@ npm run test:e2e
 
 ## Corpus français
 
-La traduction intégrée est celle de **Muhammad Hamidullah**, publiée par **QuranEnc.com** sous la clé `french_hameedullah`. Le script `scripts/import-quranenc.mjs` importe la version publiée par QuranEnc sans reformulation du texte, puis `scripts/validate-corpus.mjs` exige exactement 114 sourates et 6236 versets.
+La traduction intégrée est celle de **Muhammad Hamidullah**, publiée par **QuranEnc.com** sous la clé `french_hameedullah`. La V0 fige actuellement la **version 1.0.2**. Le script `scripts/import-quranenc.mjs` importe les 114 sourates sans reformulation du texte, puis `scripts/validate-corpus.mjs` exige exactement 114 sourates et 6236 versets.
 
-Les métadonnées exactes de la version intégrée sont écrites dans `public/data/SOURCE.md` lors de l’import.
+Les métadonnées exactes de la version intégrée et la date d’import sont conservées dans `public/data/SOURCE.md`.
 
 **Ne pas modifier le texte importé.** Avant une nouvelle publication, vérifier la version et les conditions de republication annoncées par QuranEnc.
 
