@@ -1,5 +1,6 @@
-import { loadProgress } from '../reading/progressStore';
 import { toSurahRoute } from '../app/routes';
+import { InstallAppButton } from '../components/InstallAppButton';
+import { loadProgress } from '../reading/progressStore';
 
 export function Home() {
   const progress = loadProgress();
@@ -17,6 +18,7 @@ export function Home() {
             </a>
           ) : null}
           <a className="primary-link" href="#/sourates">Choisir une sourate</a>
+          <InstallAppButton />
         </div>
       </section>
       <footer className="home-footer">
