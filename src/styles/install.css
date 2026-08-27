@@ -1,0 +1,31 @@
+.install-app-button {
+  width: 100%;
+  min-height: 4.4rem;
+  display: grid;
+  grid-template-columns: 2.7rem 1fr;
+  align-items: center;
+  gap: .85rem;
+  padding: .8rem 1rem;
+  border: 1px solid var(--edge-strong);
+  border-radius: 1rem;
+  background: linear-gradient(145deg, rgba(121,216,242,.13), rgba(255,255,255,.035));
+  color: var(--text);
+  text-align: left;
+  font-family: var(--sans);
+  cursor: pointer;
+}
+.install-app-button:active { transform: scale(.985); }
+.install-icon {
+  width: 2.7rem;
+  height: 2.7rem;
+  display: grid;
+  place-items: center;
+  border-radius: .85rem;
+  background: var(--text);
+  color: #061019;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+.install-app-button > span:last-child { display: grid; gap: .2rem; }
+.install-app-button strong { font-size: .98rem; }
+.install-app-button small { color: var(--muted); font-size: .72rem; }
