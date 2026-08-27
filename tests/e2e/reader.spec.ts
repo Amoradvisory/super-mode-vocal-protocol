@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 
 test('lecture, taille et reprise locale', async ({ page }) => {
-  await page.goto('/#/sourates');
+  await page.goto('./#/sourates');
   await expect(page.getByRole('heading', { name: 'Les sourates' })).toBeVisible();
   await page.getByRole('link', { name: /1 · Le Prologue/ }).click();
   await expect(page.locator('[data-verse-number="1"]')).toBeVisible();
@@ -25,10 +25,11 @@ test('lecture, taille et reprise locale', async ({ page }) => {
 test('aucun débordement horizontal aux tailles critiques', async ({ page }) => {
   for (const width of [320, 360, 390, 430, 768, 1024]) {
     await page.setViewportSize({ width, height: 800 });
-    await page.goto('/#/sourate/2');
+    await page.goto('./#/sourate/2');
     await page.evaluate(() => localStorage.clear());
     await page.reload();
-    for (let i = 0; i < 4; i += 1) await page.getByRole('button', { name: 'Agrandir le texte' }).click();
+    for (let i = 0; i < 3; i += 1) await page.getByRole('button', { name: 'Agrandir le texte' }).click();
+    await expect(page.getByRole('button', { name: 'Agrandir le texte' })).toBeDisabled();
     const metrics = await page.evaluate(() => ({ scrollWidth: document.documentElement.scrollWidth, clientWidth: document.documentElement.clientWidth }));
     expect(metrics.scrollWidth).toBeLessThanOrEqual(metrics.clientWidth);
   }
