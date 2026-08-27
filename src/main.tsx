@@ -4,6 +4,7 @@ import { createRoot } from 'react-dom/client';
 import { App } from './app/App';
 import { registerPwa } from './pwa/register';
 import './styles/index.css';
+import './styles/install.css';
 
 const root = document.getElementById('root');
 if (!root) throw new Error("Élément racine introuvable.");
